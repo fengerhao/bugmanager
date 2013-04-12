@@ -15,18 +15,20 @@
 			<br/>
 			Your Name <input type="text" name="username" maxlength="20"/><br/><br/>
 			Pass Word <input type="password" name="passwd" maxlength="20"/><br/><br/>
-			<input type="submit" name="logosubmit" value="&nbsp submit &nbsp"/>&nbsp&nbsp&nbsp&nbsp
+			<input type="submit" name="logosubmit" value="&nbsp commit &nbsp"/>&nbsp&nbsp&nbsp&nbsp
 			<input type="reset" name="reset" value="&nbsp reset &nbsp"/>
 		</form>
 	</div>
 
 <?php
-    if($error==1){
-        echo "<br/>密码错误,请重新登录";
-	}elseif($error==2){
-        echo "<br/>用户名错误,请重新登录";
+    if($_GET["error"]){
+        $error=$_GET["error"];
+        if($error==1){
+            echo "<br/>密码错误,请重新登录";
+	    }elseif($error==2){
+            echo "<br/>用户名错误,请重新登录";
+        }   
     }
-
 
 ?>
 </body>

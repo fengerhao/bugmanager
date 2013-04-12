@@ -1,19 +1,27 @@
 <?php
-    $name=$_POST["username"];
+    $iname=$_POST["username"];
     $ipwd=$_POST["passwd"];
+    
+    //connect database
+    $conn=mysql_connect("localhost","root","zhaixia") or die(mysql_error());
 
-    $conn=mysql_connect["localhost","root","zhaixia"] or die(mysql_error());
-    $sql="select password from `users` where name=$name";
+    //choose database
+    mysql_query("use `bugmanager`",$conn) or die(mysql_error());
+
+    //search the name's password
+    $sql="select password from `users` where name=$iname";
     $res=mysql_query($sql,$conn) or die(mysql_error());
+
+    //judge is the name and the password exist
     if(!$res){
         $pwd=mysql_fetch_field("password");
         if($pwd==$ipwd){
-            header("welcome.php");
+            header("location:welcome.php");
         }else{
-            header("index.php?error=1");
+            header("location:index.php?error=1");
         }
     }else{
-        header("index.php?error=2");
+        header("location:index.php?error=2");
     }
 
 ?>
