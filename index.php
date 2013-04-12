@@ -11,7 +11,7 @@
 <body style="margin-top:50px;">
 	<div id="login" class="logo" align="center">BugManager</div>
 	<div id="login" style="padding:14px">
-		<form onsubmit="index.php" method="post" align="center">
+		<form action="check.php" method="post" align="center">
 			<br/>
 			Your Name <input type="text" name="username" maxlength="20"/><br/><br/>
 			Pass Word <input type="password" name="passwd" maxlength="20"/><br/><br/>
@@ -19,16 +19,15 @@
 			<input type="reset" name="reset" value="&nbsp reset &nbsp"/>
 		</form>
 	</div>
-<!-----
+
 <?php
-	function logoin($username,$passwd){
-		$username=$_post['username'];
-		$passwd=$_post['passwd'];
-		echo "name=".$username."passwd=".$passwd;
-	
-	}
+    if($error==1){
+        echo "<br/>密码错误,请重新登录";
+	}elseif($error==2){
+        echo "<br/>用户名错误,请重新登录";
+    }
 
 
-?>--->
+?>
 </body>
 </html>
