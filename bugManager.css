@@ -1,0 +1,80 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+.clear{
+	clear: both;
+}
+body{
+	/*background-color:#ffffff;
+	color:white;*/
+	font-size:14px;
+}
+#bodydiv{
+	margin:0 auto;
+	width:1000px;
+	color:white;
+}
+#left{
+	float:left;
+}
+#right{
+	float:right;
+}
+/*头部div*/
+.headdiv{
+	font-weight:bold;
+	background:#006633 /* url("/1.png") no-repeat scroll 0% 0%*/;
+}
+/*缺陷管理系统 logo div*/
+.logo{
+	font-size:30px;
+	font-family:楷体;
+	padding:14px;
+}
+.headli{
+	padding:10px 30px 10px 60px;
+	float:left;
+}
+
+/*左侧导航div*/
+.leftdiv{
+	width:100px;
+	background-color:#003366;
+	padding:30px;
+	font-weight:bold;
+}
+/*内容div*/
+.rightdiv{
+	width:840px;
+	background-color:#006699;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+a:hover{
+	color:red;
+	text-decoration:underline;
+}
+ul{
+	list-style:none;
+}
+li{
+	margin:2px 0;
+}
+
+.wel{
+	font-size:20px ;
+	font-weight:bold;
+	margin:30px 0 30px 30px;
+}
+.contentul{
+	margin:20px 0 0 30px;
+}
+#login{
+	margin:0px auto;
+	width:600px;
+	font-weight:bold;
+	background:#006633;
+}
