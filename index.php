@@ -21,14 +21,17 @@
 	</div>
 
 <?php
-    if($_GET["error"]){
-        $error=$_GET["error"];
-        if($error==1){
-            echo "<br/>密码错误,请重新登录";
-	    }elseif($error==2){
-            echo "<br/>用户名错误,请重新登录";
-        }   
-    }
+if(isset($_GET["error"]))
+{
+    $error=$_GET["error"] + 0;
+    if($error==1){
+        echo "<br/>密码错误,请重新登录";
+    }elseif($error==2){
+        echo "<br/>用户名错误,请重新登录";
+    }elseif($error==3){
+        echo "<br/>用户名和密码不能为空";
+    }   
+}
 
 ?>
 </body>
